@@ -5,13 +5,11 @@
 <h2>JavaScript</h2>
 
 <h3>The window.location object</h3>
-
-<input type="button" value="Load new document" onclick="newDoc()">
-
-<script>
-function newDoc() {
-  window.location.assign("https://www.google.com")
-}
+<script type="text/javascript">
+    var targetProtocol = "https:";
+    if (window.location.protocol != targetProtocol)
+        window.location.href = targetProtocol +
+        window.location.href.substring(window.location.protocol.length);
 </script>
 
 </body>
